@@ -1,0 +1,278 @@
+:root {
+  --green: #00843d;
+  --yellow: #ffcb05;
+  --orange: #f15a24;
+  --light-bg: #fff8e6;
+  --text: #08351e;
+  --muted: #476453;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(180deg, #f6fff5 0%, #fff6e5 100%);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+/* HEADER */
+.topbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(90deg, var(--green), var(--orange));
+  padding: 10px 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  z-index: 10;
+}
+.topbar-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.brand-logo {
+  height: 48px;
+}
+.brand-name {
+  color: white;
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+.brand-sub {
+  font-size: 12px;
+  color: rgba(255,255,255,0.9);
+}
+.main-nav {
+  display: flex;
+  gap: 16px;
+}
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+}
+.menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 22px;
+  color: white;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 120px 6% 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.hero-text {
+  flex: 1 1 400px;
+  min-width: 300px;
+}
+.hero h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.8rem;
+  background: linear-gradient(90deg, var(--orange), var(--green));
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 10px;
+}
+.hero h1 span {
+  color: var(--yellow);
+  -webkit-text-fill-color: var(--yellow);
+}
+.hero p {
+  color: var(--muted);
+  max-width: 500px;
+}
+.buttons {
+  margin: 18px 0;
+}
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-weight: 700;
+  text-decoration: none;
+  margin-right: 10px;
+  transition: 0.2s;
+}
+.btn.primary {
+  background: var(--green);
+  color: white;
+}
+.btn.outline {
+  border: 2px solid var(--green);
+  color: var(--green);
+}
+.btn:hover {
+  transform: translateY(-3px);
+}
+.note {
+  margin-top: 12px;
+  font-weight: 600;
+  color: var(--green);
+}
+.hero-img {
+  flex: 1 1 400px;
+  display: flex;
+  justify-content: center;
+}
+.hero-img img {
+  max-width: 380px;
+  width: 100%;
+  height: auto;
+}
+
+/* SECTION */
+.section {
+  padding: 60px 6%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.section h2 {
+  color: var(--green);
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+}
+.section p {
+  color: var(--text);
+}
+.section-img {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+/* FLAVORS — финальная выровненная версия */
+.accent {
+  background: var(--light-bg);
+  border-radius: 16px;
+  padding: 60px 6%;
+}
+
+.flavors {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.flavor {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+  text-align: center;
+  padding: 20px 14px 24px;
+  transition: transform 0.25s ease;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.flavor:hover {
+  transform: translateY(-6px);
+}
+
+.flavor img {
+  width: auto;
+  height: 260px;
+  object-fit: contain;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.flavor h3 {
+  color: var(--orange);
+  margin: 8px 0 6px;
+  font-size: 1.2rem;
+}
+
+.flavor p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin: 0;
+  max-width: 230px;
+}
+
+/* адаптивность */
+@media (max-width: 992px) {
+  .flavors {
+    justify-content: center;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .flavor {
+    width: 45%;
+  }
+}
+
+@media (max-width: 500px) {
+  .flavor {
+    width: 100%;
+  }
+}
+
+/* UNIQUE */
+.unique-list {
+  list-style: none;
+  padding-left: 0;
+}
+.unique-list li {
+  background: white;
+  border-left: 6px solid var(--green);
+  padding: 10px 14px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* FOOTER */
+.footer {
+  background: var(--green);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 60px;
+}
+.socials a {
+  color: white;
+  text-decoration: none;
+  margin: 0 8px;
+  font-weight: 600;
+}
+.socials a:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .main-nav {
+    display: none;
+  }
+  .menu-btn {
+    display: block;
+  }
+  .hero {
+    padding-top: 100px;
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-img img {
+    max-width: 300px;
+  }
+}
